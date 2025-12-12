@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_shared_features_overview_links",
+  "info": {
+    "displayName": "Features Link",
+    "icon": "code"
+  },
+  "options": {},
+  "attributes": {
+    "content": {
+      "type": "richtext",
+      "required": true
+    },
+    "ref": {
+      "type": "string",
+      "required": true
+    },
+    "contactUsText": {
+      "type": "string"
+    },
+    "findOutMoreText": {
+      "type": "string"
+    },
+    "featuresPageType": {
+      "type": "enumeration",
+      "enum": [
+        "short",
+        "detailed"
+      ]
+    }
+  },
+  "config": {}
+}
