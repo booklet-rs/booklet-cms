@@ -19,6 +19,10 @@
       "type": "text",
       "maxLength": 80
     },
+    "excerpt": {
+      "type": "text",
+      "required": true
+    },
     "slug": {
       "type": "uid",
       "targetField": "title"
@@ -27,7 +31,11 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images", "files", "videos"]
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
     },
     "author": {
       "type": "relation",
@@ -41,9 +49,19 @@
       "target": "api::category.category",
       "inversedBy": "articles"
     },
+    "SEO": {
+      "type": "dynamiczone",
+      "components": [
+        "shared.seo"
+      ]
+    },
     "blocks": {
       "type": "dynamiczone",
-      "components": ["shared.media", "shared.quote", "shared.rich-text", "shared.slider"]
+      "components": [
+        "shared.rich-text",
+        "shared.media",
+        "shared.features-overview-link"
+      ]
     }
   }
 }
